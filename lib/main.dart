@@ -1,5 +1,6 @@
 import 'package:armino_game/constants.dart';
 import 'package:armino_game/controller/app_state_controller.dart';
+import 'package:armino_game/notech_Screen/splash_screen.dart';
 import 'package:armino_game/view/Screen/Home/main_home_holder.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -25,7 +26,7 @@ class MyApp extends StatelessWidget {
           scaffoldBackgroundColor: bgColor,
           canvasColor: secondaryColor,
         ),
-        home: MainHomeHolder(),
+        home: SplashScreen(),
       );
     });
   }

@@ -103,12 +103,15 @@ class _PopularItemState extends State<PopularItem> {
             Positioned(
               top: 130,
               left: 20,
-              child: Text(
-                widget.data!.name!,
-                style: AppFontMain(
-                  color: AppColorCode.labelColor,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
+              child: Container(
+                width: 60.w,
+                child: Text(
+                  widget.data!.name!,
+                  style: AppFontMain(
+                    color: AppColorCode.labelColor,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
                 ),
               ),
             ),
@@ -148,8 +151,11 @@ class _ItemDetilsState extends State<ItemDetils> {
   ];
   @override
   Widget build(BuildContext context) {
-    String date =
-        DateFormatHelper.datemounthYear(widget.data!.firstReleaseDate!);
+    String date = "12 Feb 2021";
+
+    if (widget.data!.firstReleaseDate != null) {
+      date = DateFormatHelper.datemounthYear(widget.data!.firstReleaseDate!);
+    }
 
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -167,11 +173,11 @@ class _ItemDetilsState extends State<ItemDetils> {
             Container(
               height: 26.h,
               width: 90.w,
-              child: Image(
-                  fit: BoxFit.cover,
-                  image: NetworkImage(
-                      HttpConstants.imageUrl + widget.data!.cover!.url!)),
               decoration: BoxDecoration(
+                  image: DecorationImage(
+                      fit: BoxFit.cover,
+                      image: NetworkImage(
+                          HttpConstants.imageUrl + widget.data!.cover!.url!)),
                   borderRadius: const BorderRadius.only(
                       topLeft: Radius.circular(22),
                       topRight: const Radius.circular(22))),
@@ -201,12 +207,15 @@ class _ItemDetilsState extends State<ItemDetils> {
                 children: [
                   Row(
                     children: [
-                      Text(
-                        widget.data!.name!,
-                        style: AppFontMain(
-                          color: AppColorCode.labelColor,
-                          fontSize: 16,
-                          fontWeight: FontWeight.w700,
+                      Container(
+                        width: 60.w,
+                        child: Text(
+                          widget.data!.name!,
+                          style: AppFontMain(
+                            color: AppColorCode.labelColor,
+                            fontSize: 16,
+                            fontWeight: FontWeight.w700,
+                          ),
                         ),
                       ),
                     ],

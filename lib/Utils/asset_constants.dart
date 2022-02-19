@@ -13,5 +13,5 @@ class AssetConstant {
   static const String ios = 'assets/icons/ios.svg';
   static const String steam = 'assets/icons/steam.svg';
   static const String puzzle = 'assets/icons/puzzle.svg';
-  static const String person = 'assets/icons/person.svg';
+  static const String person = 'assets/icons/john.png';
 }

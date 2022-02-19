@@ -280,11 +280,14 @@ Widget appBar({String? label}) {
                   child: Container(
                     height: 13.h,
                     width: 15.w,
-                    decoration: BoxDecoration(
+                    decoration: new BoxDecoration(
+                        image: new DecorationImage(
+                          image: new ExactAssetImage(AssetConstant.person),
+                          fit: BoxFit.cover,
+                        ),
                         shape: BoxShape.circle,
                         color: AppColorCode.primaryText,
                         border: Border.all(color: AppColorCode.brandColor)),
-                    child: SvgPicture.asset(AssetConstant.person),
                   ),
                 ),
                 const SizedBox(width: 12),
