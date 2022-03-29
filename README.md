@@ -1,2 +1,2 @@
-# armino_gams
+# gams
 game details app 
